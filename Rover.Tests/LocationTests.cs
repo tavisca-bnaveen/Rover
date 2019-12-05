@@ -46,5 +46,19 @@ namespace Rover.Tests
             Assert.Equal(9, newPosition.Y);
             Assert.Equal('W', newPosition.direction.ToString()[0]);
         }
+
+        [Fact]
+        public void Test_For_Final_Location4()
+        {
+            var position = new Position();
+            position.X = 0;
+            position.Y = 0;
+            position.direction = DirectionFactory.GetEnumDirection("N");
+            var location = new Location();
+            var newPosition = location.GetFinalDirection(position, "MMRMRMRMMLMLM");
+            Assert.Equal(0, newPosition.X);
+            Assert.Equal(0, newPosition.Y);
+            Assert.Equal('E', newPosition.direction.ToString()[0]);
+        }
     }
 }
