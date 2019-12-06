@@ -57,5 +57,6 @@ namespace Rover.Tests
             Assert.Equal('E', newPosition.Direction.ToString()[0]);
             Assert.Equal("(0,0,E)", parser.OutputParser(newPosition));
         }
+        
     }
 }
