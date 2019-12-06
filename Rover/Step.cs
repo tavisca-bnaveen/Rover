@@ -4,7 +4,7 @@
     {
         public Position MoveForward(Position position)
         {
-            switch (position.direction.ToString().ToLower())
+            switch (position.Direction.ToString().ToLower())
             {
                 case "north":
                     position.Y += 1;

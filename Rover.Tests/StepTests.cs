@@ -18,7 +18,7 @@ namespace Rover.Tests
         public void Test_For_Moving_Forward_North()
         {
 
-            _position.direction = DirectionFactory.GetEnumDirection("N");
+            _position.Direction = DirectionFactory.GetEnumDirection("N");
             _step.MoveForward(_position);
             Assert.Equal(1, _position.Y);
             Assert.Equal(0, _position.X);
@@ -27,7 +27,7 @@ namespace Rover.Tests
         public void Test_For_Moving_Forward_South()
         {
 
-            _position.direction = DirectionFactory.GetEnumDirection("S");
+            _position.Direction = DirectionFactory.GetEnumDirection("S");
             _step.MoveForward(_position);
             Assert.Equal(-1, _position.Y);
             Assert.Equal(0, _position.X);
@@ -36,7 +36,7 @@ namespace Rover.Tests
         public void Test_For_Moving_Forward_West()
         {
 
-            _position.direction = DirectionFactory.GetEnumDirection("W");
+            _position.Direction = DirectionFactory.GetEnumDirection("W");
             _step.MoveForward(_position);
             Assert.Equal(0, _position.Y);
             Assert.Equal(-1, _position.X);
@@ -45,7 +45,7 @@ namespace Rover.Tests
         public void Test_For_Moving_Forward_East()
         {
 
-            _position.direction = DirectionFactory.GetEnumDirection("E");
+            _position.Direction = DirectionFactory.GetEnumDirection("E");
             _step.MoveForward(_position);
             Assert.Equal(0, _position.Y);
             Assert.Equal(1, _position.X);

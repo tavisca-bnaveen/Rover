@@ -16,7 +16,7 @@ namespace Rover
         public Position GetFinalDirection(Position _position, string _path)
         {
             
-            var directionValue = (int)_position.direction;
+            var directionValue = (int)_position.Direction;
             for(int i=0;i< _path.Length; i++)
             {
                 switch (_path[i].ToString().ToUpper())
@@ -37,7 +37,7 @@ namespace Rover
                 if (directionValue < 0)
                     tempDirectionValue = 4+(directionValue%4);
                 Enum.TryParse<Direction>(((tempDirectionValue % 4)).ToString(), out _direction);
-                _position.direction = _direction; 
+                _position.Direction = _direction; 
             }
             return _position;
         }

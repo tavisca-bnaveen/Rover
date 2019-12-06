@@ -12,7 +12,7 @@
             var parsedString = input.Split(',');
             _position.X =int.Parse( parsedString[0].Substring(1));
             _position.Y = int.Parse(parsedString[1]);
-            _position.direction = DirectionFactory.GetEnumDirection(parsedString[2][0].ToString());
+            _position.Direction = DirectionFactory.GetEnumDirection(parsedString[2][0].ToString());
             return _position;
         }
         public string OutputParser(Position position)
@@ -22,7 +22,7 @@
             output += ",";
             output += position.Y.ToString();
             output += ",";
-            output += position.direction.ToString()[0];
+            output += position.Direction.ToString()[0];
             output += ")";
             return output;
         }
